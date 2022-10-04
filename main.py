@@ -25,7 +25,7 @@ User = Client(
 
 @Bot.on_message(filters.private & filters.command("start"))
 async def start_handler(_, event: Message):
-	await event.reply_photo("https://te.legra.ph/file/50276889b7b4de006cff5.jpg",
+	await event.reply_photo("https://telegra.ph/file/3bfa356ff3c9029c0d1d5.jpg",
                                 caption=Config.START_MSG.format(event.from_user.mention),
                                 reply_markup=InlineKeyboardMarkup([
                                     [InlineKeyboardButton("Our Channel", url="https://t.me/serials_funda"),
