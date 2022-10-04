@@ -57,7 +57,7 @@ async def inline_handlers(_, event: Message):
             if "|||" in message.text:
                 f_text = message.text.split("|||", 1)[0]
                 msg_text = message.text.html.split("|||", 1)[0]
-            answers += f'**🍿 Movie name ➠ ' + '' + f_text.split("\n", 1)[0] + '' + '\n\n 🔗 movie link ➠ ' + '' + f_text.split("\n", 2)[-1] + '**'
+            answers += f'**🍿 serial name ➠ ' + '' + f_text.split("\n", 1)[0] + '' + '\n\n 🔗 serial link ➠ ' + '' + f_text.split("\n", 2)[-1] + '**'
     try:
         msg = await event.reply_text(answers)
         await asyncio.sleep(60)
