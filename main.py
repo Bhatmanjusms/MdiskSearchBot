@@ -28,8 +28,8 @@ async def start_handler(_, event: Message):
 	await event.reply_photo("https://te.legra.ph/file/50276889b7b4de006cff5.jpg",
                                 caption=Config.START_MSG.format(event.from_user.mention),
                                 reply_markup=InlineKeyboardMarkup([
-                                    [InlineKeyboardButton("Our Channel", url="https://t.me/rockersbackup"),
-                                     InlineKeyboardButton("Creator", url="https://t.me/alonekingjnanesh")],
+                                    [InlineKeyboardButton("Our Channel", url="https://t.me/serials_funda"),
+                                     InlineKeyboardButton("owner", url="https://t.me/bhatmanju")],
                                     [InlineKeyboardButton("Help", callback_data="Help_msg"),
                                      InlineKeyboardButton("About", callback_data="About_msg")]]))
 
@@ -38,8 +38,8 @@ async def help_handler(_, event: Message):
 
     await event.reply_text(Config.ABOUT_HELP_TEXT.format(event.from_user.mention),
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("Our Channel", url="https://t.me/rockersbackup"),
-             InlineKeyboardButton("Our Group", url="https://t.me/rockersmoviejnaneshgroup"), 
+            [InlineKeyboardButton("Our Channel", url="https://t.me/serials_funda"),
+             InlineKeyboardButton("Our Group", url="https://t.me/+qrdrVHObMZg1ODdl"), 
              InlineKeyboardButton("About", callback_data="About_msg")]
         ])
     )
@@ -77,11 +77,11 @@ async def button(bot, cmd: CallbackQuery):
 			reply_markup=InlineKeyboardMarkup(
 				[
 					[
-						InlineKeyboardButton("Our Channel", url="https://t.me/rockersbackup"),
-						InlineKeyboardButton("Join", url="https://t.me/rockersbackup")
+						InlineKeyboardButton("Our Channel", url="https://t.me/serials_funda"),
+						InlineKeyboardButton("our group", url="https://t.me/+qrdrVHObMZg1ODdl")
 					],
 					[
-						InlineKeyboardButton("Creator", url="https://t.me/alonekingjnanesh"),
+						InlineKeyboardButton("my owner", url="https://t.me/bhatmanju"),
 						InlineKeyboardButton("Home", callback_data="gohome")
 					]
 				]
@@ -96,10 +96,10 @@ async def button(bot, cmd: CallbackQuery):
 				[
 					[
 						InlineKeyboardButton("About", callback_data="About_msg"),
-						InlineKeyboardButton("Our Channel", url="https://t.me/rockersbackup")
+						InlineKeyboardButton("Our Channel", url="https://t.me/serials_funda")
 					], 
                                         [
-						InlineKeyboardButton("Owner", url="https://t.me/alonekingjnanesh"),
+						InlineKeyboardButton("my Owner", url="https://t.me/bhatmanju"),
 						InlineKeyboardButton("Home", callback_data="gohome")
 					]
 				]
@@ -117,8 +117,8 @@ async def button(bot, cmd: CallbackQuery):
 						InlineKeyboardButton("About", callback_data="About_msg")
 					],
 					[
-						InlineKeyboardButton("Support", url="https://t.me/rockersbackup"),
-						InlineKeyboardButton("Channel", url="https://t.me/rockersbackup")
+						InlineKeyboardButton("Support", url="https://t.me/bhatmanju"),
+						InlineKeyboardButton("Channel", url="https://t.me/serials_funda")
 					]
 				]
 			),
