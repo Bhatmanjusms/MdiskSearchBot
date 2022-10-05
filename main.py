@@ -51,7 +51,7 @@ async def inline_handlers(_, event: Message):
     answers = f'**📂 Results For ➠ {event.text} **'
     async for message in User.search_messages(chat_id=Config.CHANNEL_ID, limit=50, query=event.text):
         if message.text:
-            thumb = None
+            thumb = True
             f_text = message.text
             msg_text = message.text.html
             if "|||" in message.text:
