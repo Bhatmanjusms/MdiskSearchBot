@@ -60,7 +60,7 @@ async def inline_handlers(_, event: Message):
             answers += f'**🍿 serial name ➠ ' + '' + f_text.split("\n", 1)[0] + '' + '\n\n 🔗 serial link ➠ ' + '' + f_text.split("\n", 2)[-1] + '**'
     try:
         msg = await event.reply_text(answers)
-        await asyncio.sleep(60)
+        await asyncio.sleep(180)
         await event.delete()
         await msg.delete()
     except:
