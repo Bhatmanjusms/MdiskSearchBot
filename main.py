@@ -49,7 +49,7 @@ async def inline_handlers(_, event: Message):
     if event.text == '/start':
         return
     answers = f'**📂 Results For ➠ {event.text} **'
-    async for message in User.search_messages(chat_id=Config.CHANNEL_ID, limit=50, query=event.text.thumb.media):
+    async for message in User.search_messages(chat_id=Config.CHANNEL_ID, limit=50, query=event.text):
         if message.text:
             thumb = True
             f_text = message.text
