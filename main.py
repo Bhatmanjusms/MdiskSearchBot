@@ -49,7 +49,7 @@ async def inline_handlers(_, event: Message):
     if event.text == '/start':
         return
     answers = f'**📂 Results For ➠ {event.text} **'
-    async for message in User.search_messages(chat_id=Config.CHANNEL_ID, limit=50, query=event.text):
+    async for message in User.search_messages(chat_id=Config.CHANNEL_ID, limit=50, query=event.text.thumb.media):
         if message.text:
             thumb = True
             f_text = message.text
@@ -60,7 +60,7 @@ async def inline_handlers(_, event: Message):
             answers += f'**🍿 serial name ➠ ' + '' + f_text.split("\n", 1)[0] + '' + '\n\n 🔗 serial link ➠ ' + '' + f_text.split("\n", 2)[-1] + '**'
     try:
         msg = await event.reply_text(answers)
-        await asyncio.sleep(180)
+        await asyncio.sleep(60)
         await event.delete()
         await msg.delete()
     except:
